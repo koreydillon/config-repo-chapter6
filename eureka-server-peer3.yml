@@ -1,0 +1,13 @@
+server:
+  port: 8073
+eureka:
+  instance:
+    hostname: eurekaserver3
+    preferIpAddress: false
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://eurekaserver1:8070/eureka/,http://eurekaserver2:8072/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 5
